@@ -32,8 +32,8 @@
                     document.querySelector("#addExamDeliverer").dispatchEvent(new Event("change"));
                     document.querySelector("#addExamOtherDeliv").value = arr[i]["Eingestellt von"];
                     document.querySelector("#addExamComment").value = arr[i]["Kommentar"];
-                    await wait(1000);
-                    await document.querySelector("body > div:nth-child(7) > div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix > div > button:nth-child(1)").click();
+                    await wait(2000);
+                    await document.querySelector("body > div:nth-child(6) > div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix > div > button:nth-child(1)").click();
                     await wait(1000);
                     await waitForLoadingLayerToDisappear();
                     await waitForElement(`#filesAttachments_relevantLink_${countPruefgegenstand}`);
