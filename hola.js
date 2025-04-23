@@ -1,4 +1,4 @@
 javascript:(function() {
-    alert('Starting script!');
+    alert('Starting script, remote from github pages!');
     
 })();
