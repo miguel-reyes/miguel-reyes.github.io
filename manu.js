@@ -36,7 +36,7 @@
                     await wait(1000);
                     await waitForLoadingLayerToDisappear();
                     await waitForElement(`#filesAttachments_relevantLink_${countPruefgegenstand}`);
-                    await wait(1000);
+                    await wait(2000);
                     document.querySelector(`#filesAttachments_relevantLink_${countPruefgegenstand}`).value = arr[i]["Dokument-URL"];
                     countPruefgegenstand = countPruefgegenstand + 1;
                 }
