@@ -23,7 +23,7 @@
         let countPruefgegenstand = 0;
         for(let i = 0; i < arr.length; i++) {
             try {
-                if(arr[i]["Q-Maﬂnahme"] === document.querySelector("#jr-step-actionbar > li:nth-child(2) > h1 > span.jr-headline-steplabel").textContent.substring(0, 4)){
+                if(arr[i]["Q-Ma√ünahme"] === document.querySelector("#jr-step-actionbar > li:nth-child(2) > h1 > span.jr-headline-steplabel").textContent.substring(0, 4)){
                     document.querySelector("#addExamination").click();
                     await wait(1000);
                     document.querySelector("#addExamDocLink").value = "link";
@@ -106,5 +106,5 @@
 
     await wait(1000);
 
-    alert(`Das Skript ist beendet. Bitte geben sie den Change unter "Release ID (HPSM) / Sammler ID (ServiceNow)" oder "Normal Change ID" ein und weisen sie die Q-Maﬂnahme einem Benutzer zu.`);
+    alert(`Das Skript ist beendet. Bitte geben sie den Change unter "Release ID (HPSM) / Sammler ID (ServiceNow)" oder "Normal Change ID" ein und weisen sie die Q-Ma√ünahme einem Benutzer zu.`);
 })(); 
