@@ -83,7 +83,7 @@ javascript:(async function() {
               const CSVArray = await createInputAndClick();
               console.log("Done creating Input and Click");
               console.log("Prompting");
-              let qmdurchfuehrer = prompt("Bitte User ID vom QM-Durchführer Eingeben", "XXXX");
+              let qmdurchfuehrer = prompt("Bitte User ID vom QM-DurchfÃ¼hrer Eingeben", "XXXX");
               console.log("Done Prompting done");
 
               async function addGeneralInformation() {
@@ -126,9 +126,14 @@ javascript:(async function() {
                                           for (let numberOfCSVArray = 0; numberOfCSVArray < CSVArray.length; numberOfCSVArray = numberOfCSVArray + 1) {
                                                          console.log(`Outer loop, number: ${numberOfQMassnahmenArr}, value: ${qMassnahmenArr[numberOfQMassnahmenArr]}, inner loop number: ${numberOfCSVArray}, value: ${CSVArray[numberOfCSVArray]}`);
                                                          let skippedElements = 0;
-                                                         if (CSVArray[numberOfCSVArray]["Q-Maßnahme"] !== qMassnahmenArr[numberOfQMassnahmenArr]) {
+                                                         if (CSVArray[numberOfCSVArray]["Q-MaÃŸnahme"] !== qMassnahmenArr[numberOfQMassnahmenArr]) {
                                                                        skippedElements = skippedElements + 1;
                                                                        console.log(`Skipping outer loop, number: ${numberOfQMassnahmenArr}, value: ${qMassnahmenArr[numberOfQMassnahmenArr]}, inner loop number: ${numberOfCSVArray}, value: ${CSVArray[numberOfCSVArray]}`);
+                                                                       console.log(`skippedElements: ${skippedElements}`);
+                                                                       console.log(`CSVArray[numberOfCSVArray]["Q-MaÃŸnahme"]: ${CSVArray[numberOfCSVArray]["Q-MaÃŸnahme"]}`);
+                                                                       console.log(`qMassnahmenArr[numberOfQMassnahmenArr]: ${qMassnahmenArr[numberOfQMassnahmenArr]}`);
+                                                                       console.log(`CSVArray:`);
+                                                                       console.log(CSVArray);
                                                                        continue;
                                                          }
                                                          console.log(`Outer loop, number: ${numberOfQMassnahmenArr}, value: ${qMassnahmenArr[numberOfQMassnahmenArr]}, inner loop number: ${numberOfCSVArray}, value: ${CSVArray[numberOfCSVArray]}, add file selectors`);
@@ -192,5 +197,5 @@ javascript:(async function() {
 
               await wait(1000);
 
-              alert(`Das Skript ist beendet. Bitte geben sie den Change unter "Release ID (HPSM) / Sammler ID (ServiceNow)" oder "Normal Change ID" ein und weisen sie die Q-Maßnahme einem Benutzer zu.`);
+              alert(`Das Skript ist beendet. Bitte geben sie den Change unter "Release ID (HPSM) / Sammler ID (ServiceNow)" oder "Normal Change ID" ein und weisen sie die Q-MaÃŸnahme einem Benutzer zu.`);
 })();
